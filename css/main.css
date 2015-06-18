@@ -85,6 +85,46 @@ h1 {
 
 
 
+#about table,
+#about tr,
+#about td {
+  border: 0;
+  padding: 0;
+  border-spacing: 0;
+}
+#about table tr td {
+  width: 50%;
+}
+#about table tr td.text {
+  background: url(/img/about-bg.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 66px;
+}
+#about table tr td.text h1 {
+  margin-bottom: 10px;
+}
+#about table tr td.text span {
+  font-size: 13px;
+  line-height: 18px;
+}
+#about table tr td.image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#about table tr td.image img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1199px) {
+  #about table tr td.image img {
+    display: none;
+  }
+}
+
+
+
+
 
 #contact {
   background: #000;
