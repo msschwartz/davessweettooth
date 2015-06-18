@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'futura_ptbook';
+    src: url('../fonts/futurapt-book-webfont.eot');
+    src: url('../fonts/futurapt-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/futurapt-book-webfont.woff2') format('woff2'),
+         url('../fonts/futurapt-book-webfont.woff') format('woff'),
+         url('../fonts/futurapt-book-webfont.ttf') format('truetype'),
+         url('../fonts/futurapt-book-webfont.svg#futura_ptbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'futura_ptheavy';
+    src: url('../fonts/futurapt-heavy-webfont.eot');
+    src: url('../fonts/futurapt-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/futurapt-heavy-webfont.woff2') format('woff2'),
+         url('../fonts/futurapt-heavy-webfont.woff') format('woff'),
+         url('../fonts/futurapt-heavy-webfont.ttf') format('truetype'),
+         url('../fonts/futurapt-heavy-webfont.svg#futura_ptheavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'dst';
+  src: url('../fonts/dst.eot?25703472');
+  src: url('../fonts/dst.eot?25703472#iefix') format('embedded-opentype'),
+       url('../fonts/dst.woff?25703472') format('woff'),
+       url('../fonts/dst.ttf?25703472') format('truetype'),
+       url('../fonts/dst.svg?25703472#dst') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-menu-icon:before { content: '\e800'; } /* '' */
+.icon-facebook:before { content: '\e801'; } /* '' */
+.icon-twitter:before { content: '\e802'; } /* '' */
+.icon-instagram:before { content: '\e803'; } /* '' */
