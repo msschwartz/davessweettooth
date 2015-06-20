@@ -132,6 +132,13 @@ h1 {
 
 
 
+#locations #map-canvas {
+  height: 400px;
+}
+
+
+
+
 #contact {
   background: #000;
   color: #fff;

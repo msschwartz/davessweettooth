@@ -13,6 +13,9 @@
   <!-- fontawesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   
+  <!-- Google -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+  
   <!-- site css and js -->
   <script type="text/javascript" src="/js/main.js"></script>
   <link rel="stylesheet" href="/css/fonts.css">
@@ -57,7 +60,29 @@
   </div>
   
   <div id="locations">
-    <h1>locations go here...</h1>
+    <div id="map-canvas"></div>
+    <script>
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+        var mapOptions = {
+          zoom: 4,
+          center: myLatlng,
+          scrollwheel: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          mapTypeControl: false
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Hello World!'
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    
   </div>
   
   <div id="about">
