@@ -27,7 +27,7 @@
       <div style="background-image: url(/img/header-slide3.jpg)"></div>
     </div>
     <div class="overlay"></div>
-    <img class="logo" src="/img/logo.svg" />
+    <a class="logo" href="/"><img src="/img/logo.svg" /></a>
     <div class="menu">
       <a id="menu-icon" href="#">&#xE800;</a>
       <ul id="menu-list">
@@ -41,7 +41,19 @@
   </div><!-- #header -->
   
   <div id="toffee">
-    <h1>products go here...</h1>
+    <!-- cherries and grapes script -->
+    <div id="cg-root"></div>
+    <script>
+      var _cgid = "50fb035fc1277d1d2f000000"; 
+    </script>
+    <script type="text/javascript" src="//cherriesandgrapes.com/js/cg.js"></script>
+    <script type="text/javascript">
+      cg.originalBindControls = cg.bindControls;
+      cg.bindControls = function() {
+        productsInserted();
+        cg.originalBindControls();
+      };
+    </script>
   </div>
   
   <div id="locations">
