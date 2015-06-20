@@ -44,19 +44,36 @@
   </div><!-- #header -->
   
   <div id="toffee">
+    <div class="toffee-slider pouches-slider">
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+    </div>
+    
+    <hr>
+    
+    <div class="toffee-slider mini-jars-slider">
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+    </div>
+    
+    <hr>
+    
+    <div class="toffee-slider jars-slider">
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+      <div class="product product-pouch">your content</div>
+    </div>
+  
     <!-- cherries and grapes script -->
-    <div id="cg-root"></div>
-    <script>
-      var _cgid = "50fb035fc1277d1d2f000000"; 
-    </script>
-    <script type="text/javascript" src="//cherriesandgrapes.com/js/cg.js"></script>
-    <script type="text/javascript">
-      cg.originalBindControls = cg.bindControls;
-      cg.bindControls = function() {
-        productsInserted();
-        cg.originalBindControls();
-      };
-    </script>
+    <div id="cg-root"></div><script> var _cgid = "50fb035fc1277d1d2f000000"; (function(d) { var cg, id='cg-js', r = d.getElementsByTagName('script')[0]; if(d.getElementById(id)){return;} cg = d.createElement('script'); cg.id = id; cg.async = true; cg.src = "//cherriesandgrapes.com/js/cg.js"; r.parentNode.insertBefore(cg, r); })(document);</script>
   </div>
   
   <div id="locations">

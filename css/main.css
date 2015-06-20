@@ -125,10 +125,17 @@ h1 {
 
 
 
-#toffee #cg-root .cg-product {
-  /* display: none; */
+#toffee #cg-root {
+  display: none;
 }
-
+#toffee .toffee-slider {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+#toffee .toffee-slider .product {
+  border: 1px solid #333;
+  background-color: #999;
+}
 
 
 

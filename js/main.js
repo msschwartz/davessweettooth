@@ -12,6 +12,30 @@ $(document).ready( function() {
             .appendTo('#header .slideshow');
     }, 3000);
     
+    $('.toffee-slider').slick({
+        slidesToShow: 5,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+    
 });
 
 
