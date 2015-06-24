@@ -43,13 +43,21 @@
     </div>
   </div><!-- #header -->
   
+  <?php $product_config = json_decode(file_get_contents("products.json")); ?>
   <div id="toffee">
     <div class="toffee-slider pouches-slider">
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
+      <?php foreach ($product_config->pouches as $pouch) : ?>
+        <div class="product product-pouch">
+          <div class="details">
+            <table><tr><td>
+              <div class="title"><?php echo $pouch->name; ?></div>
+              <div class="price"><span class="dollars"><?php echo $product_config->pouch_price; ?></span><span class="shipping"> + shipping</span></div>
+              <div class="buy"><a href="#" class="btn cg-EZaddtocart" oid="<?php echo $pouch->order_id; ?>">Buy</a></div>
+            </td></tr></table>
+          </div>
+          <img class="image" src="/img/products/pouch-<?php echo $pouch->key; ?>.jpg" />
+        </div>
+      <?php endforeach; ?>
     </div>
     
     <hr>

@@ -1,0 +1,73 @@
+{
+  "pouch_price": "$5",
+  "pouches": [
+    {
+      "key": "mc",
+      "name": "Milk<br />Chocolate",
+      "order_id": "50fb0cf4c1277d102f000003"
+    },
+    {
+      "key": "dc",
+      "name": "Dark<br />Chocolate",
+      "order_id": "50fb0cf4c1277d102f000003"
+    },
+    {
+      "key": "pbc",
+      "name": "Peanut Butter<br />Crunch",
+      "order_id": "50fb0cf4c1277d102f000003"
+    },
+    {
+      "key": "dcc",
+      "name": "Dark Chocolate<br />Cherry",
+      "order_id": "50fb0cf4c1277d102f000003"
+    },
+    {
+      "key": "ct",
+      "name": "Coffee<br />Toffee",
+      "order_id": "50fb0cf4c1277d102f000003"
+    }
+  ],
+  
+  "mini_jar_price": "$10",
+  "mini_jars": [
+    {
+      "key": "mc",
+      "name": "Milk Chocolate",
+      "order_id": "50fb0cf4c1277d102f000003"
+    },
+    {
+      "key": "dc",
+      "name": "Dark Chocolate",
+      "order_id": "50fb0cf4c1277d102f000003"
+    },
+    {
+      "key": "pbc",
+      "name": "Peanut Butter Crunch",
+      "order_id": "50fb0cf4c1277d102f000003"
+    },
+    {
+      "key": "dcc",
+      "name": "Dark Chocolate Cherry",
+      "order_id": "50fb0cf4c1277d102f000003"
+    },
+    {
+      "key": "ct",
+      "name": "Coffee Toffee",
+      "order_id": "50fb0cf4c1277d102f000003"
+    }
+  ],
+  
+  "jar_price": "$25",
+  "jars": [
+    {
+      "key": "mc",
+      "name": "Milk Chocolate",
+      "order_id": "50fb0cf4c1277d102f000003"
+    },
+    {
+      "key": "dc",
+      "name": "Dark Chocolate",
+      "order_id": "50fb0cf4c1277d102f000003"
+    }
+  ]
+}
