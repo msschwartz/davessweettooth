@@ -12,13 +12,20 @@ $(document).ready( function() {
             .appendTo('#header .slideshow');
     }, 3000);
     
-    $('.toffee-slider').slick({
+    $('.pouches-slider, .mini-jars-slider').slick({
         slidesToShow: 5,
+        dots: true,
         responsive: [
             {
-                breakpoint: 1023,
+                breakpoint: 1080,
                 settings: {
                     slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 920,
+                settings: {
+                    slidesToShow: 3,
                 }
             },
             {
@@ -27,6 +34,17 @@ $(document).ready( function() {
                     slidesToShow: 2,
                 }
             },
+            {
+                breakpoint: 499,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+    $('.jars-slider').slick({
+        slidesToShow: 2,
+        responsive: [
             {
                 breakpoint: 480,
                 settings: {

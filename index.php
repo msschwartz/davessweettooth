@@ -7,7 +7,8 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
   
   <!-- slick -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
   
   <!-- fontawesome -->
@@ -48,6 +49,7 @@
     <div class="toffee-slider pouches-slider">
       <?php foreach ($product_config->pouches as $pouch) : ?>
         <div class="product product-pouch">
+          <img class="image" src="/img/products/pouch-<?php echo $pouch->key; ?>.jpg" />
           <div class="details">
             <table><tr><td>
               <div class="title"><?php echo $pouch->name; ?></div>
@@ -55,7 +57,6 @@
               <div class="buy"><a href="#" class="btn cg-EZaddtocart" oid="<?php echo $pouch->order_id; ?>">Buy</a></div>
             </td></tr></table>
           </div>
-          <img class="image" src="/img/products/pouch-<?php echo $pouch->key; ?>.jpg" />
         </div>
       <?php endforeach; ?>
     </div>
@@ -69,21 +70,41 @@
     
     
     <div class="toffee-slider mini-jars-slider">
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
+      <?php foreach ($product_config->mini_jars as $mini_jar) : ?>
+        <div class="product product-pouch">
+          <img class="image" src="/img/products/mini-jar-<?php echo $mini_jar->key; ?>.jpg" />
+          <div class="details">
+            <table><tr><td>
+              <div class="title"><?php echo $mini_jar->name; ?></div>
+              <div class="price"><span class="dollars"><?php echo $product_config->mini_jar_price; ?></span> <span class="shipping">+ shipping</span></div>
+              <div class="buy"><a href="#" class="btn cg-EZaddtocart" oid="<?php echo $mini_jar->order_id; ?>">Buy</a></div>
+            </td></tr></table>
+          </div>
+        </div>
+      <?php endforeach; ?>
     </div>
     
-    <hr>
+    <div class="toffee-collection mini-jar-collection">
+      <div class="title">Mini Jar Collection</div>
+      <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div class="price"><span class="dollars"><?php echo $product_config->mini_jar_collection_price; ?></span> <span class="shipping">free shipping</span></div>
+      <div class="buy"><a href="#" class="btn cg-EZaddtocart" oid="<?php echo $pouch->mini_jar_collection_order_id; ?>">Buy</a></div>
+    </div>
+    
     
     <div class="toffee-slider jars-slider">
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
-      <div class="product product-pouch">your content</div>
+      <?php foreach ($product_config->jars as $jar) : ?>
+        <div class="product product-pouch">
+          <img class="image" src="/img/products/jar-<?php echo $jar->key; ?>.jpg" />
+          <div class="details">
+            <table><tr><td>
+              <div class="title"><?php echo $jar->name; ?></div>
+              <div class="price"><span class="dollars"><?php echo $product_config->jar_price; ?></span> <span class="shipping">+ shipping</span></div>
+              <div class="buy"><a href="#" class="btn cg-EZaddtocart" oid="<?php echo $jar->order_id; ?>">Buy</a></div>
+            </td></tr></table>
+          </div>
+        </div>
+      <?php endforeach; ?>
     </div>
   
     <!-- cherries and grapes script -->

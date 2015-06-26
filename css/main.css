@@ -138,7 +138,11 @@ h1 {
 
 
 
-
+#toffee {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 #toffee #cg-root {
   display: none;
 }
@@ -147,15 +151,21 @@ h1 {
   margin: 0 auto;
   height: 276px;
 }
-#toffee .toffee-slider.pouches-slider {
+#toffee .toffee-slider.pouches-slider,
+#toffee .toffee-slider.mini-jars-slider,
+#toffee .toffee-slider.jars-slider {
   margin-top: 90px;
+}
+#toffee .toffee-slider.jars-slider {
+  margin-bottom: 90px;
 }
 #toffee .toffee-slider .product {
   padding: 0;
   position: relative;
 }
 #toffee .toffee-slider .product .details {
-  display: none;
+  opacity: 0;
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
@@ -174,10 +184,6 @@ h1 {
   text-transform: uppercase;
   font-size: 16px;
 }
-#toffee .toffee-slider .product .details .price {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
 #toffee .toffee-slider .product .details .price .dollars {
   font-family: "futura_ptheavy";
 }
@@ -187,20 +193,29 @@ h1 {
 }
 #toffee .toffee-slider .product .image {
   display: block;
+  z-index: 1;
   height: 276px;
   width: auto;
   margin: 0 auto;
+  opacity: 1;
 }
 #toffee .toffee-slider .product:hover .details {
-  display: block;
+  opacity: 1;
 }
 #toffee .toffee-slider .product:hover .image {
-  display: none;
+  opacity: 0;
 }
+
 #toffee .toffee-collection {
   text-align: center;
   margin-top: 40px;
 }
+@media (max-width: 1079px) {
+  #toffee .toffee-collection {
+    margin-top: 60px;
+  }
+}
+
 #toffee .toffee-collection .title,
 #toffee .toffee-collection .dollars,
 #toffee .toffee-collection .shipping {
@@ -212,9 +227,48 @@ h1 {
 }
 
 
+#toffee .toffee-slider .product .details .title,
+#toffee .toffee-slider .product .details .price,
+#toffee .toffee-collection .title,
+#toffee .toffee-collection .description,
+#toffee .toffee-collection .price {
+  margin-bottom: 14px;
+}
+
+/* mini jars are taller than pouches */
+#toffee .toffee-slider.mini-jars-slider,
+#toffee .toffee-slider.jars-slider,
+#toffee .toffee-slider.mini-jars-slider .product .image,
+#toffee .toffee-slider.jars-slider .product .image {
+  height: 320px;
+}
+
+/* we only have 2 big jars... */
+#toffee .toffee-slider.jars-slider {
+  max-width: 680px;
+}
+
+.slick-prev, .slick-next {
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+}
+.slick-prev:before, .slick-next:before {
+  color: #000;
+  font-family: 'dst';
+  font-size: 30px;
+}
+.slick-prev:before {
+  content: '\e804';
+}
+.slick-next:before {
+  content: '\e805';
+}
+
 
 
 #locations #map-canvas {
+  background-color: #ccc;
   height: 400px;
 }
 
