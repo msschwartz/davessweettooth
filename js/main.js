@@ -44,9 +44,10 @@ $(document).ready( function() {
     });
     $('.jars-slider').slick({
         slidesToShow: 2,
+        dots: true,
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 499,
                 settings: {
                     slidesToShow: 1,
                 }
