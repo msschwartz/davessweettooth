@@ -147,6 +147,9 @@ h1 {
   margin: 0 auto;
   height: 276px;
 }
+#toffee .toffee-slider.pouches-slider {
+  margin-top: 90px;
+}
 #toffee .toffee-slider .product {
   padding: 0;
   position: relative;
@@ -178,7 +181,8 @@ h1 {
 #toffee .toffee-slider .product .details .price .dollars {
   font-family: "futura_ptheavy";
 }
-#toffee .toffee-slider .product .details .price .shipping {
+#toffee .toffee-slider .product .details .price .shipping,
+#toffee .toffee-collection .shipping {
   color: #999;
 }
 #toffee .toffee-slider .product .image {
@@ -192,6 +196,19 @@ h1 {
 }
 #toffee .toffee-slider .product:hover .image {
   display: none;
+}
+#toffee .toffee-collection {
+  text-align: center;
+  margin-top: 40px;
+}
+#toffee .toffee-collection .title,
+#toffee .toffee-collection .dollars,
+#toffee .toffee-collection .shipping {
+  font-family: "futura_ptheavy";
+  font-size: 16px;
+}
+#toffee .toffee-collection .title {
+  text-transform: uppercase;
 }
 
 

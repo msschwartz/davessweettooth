@@ -51,7 +51,7 @@
           <div class="details">
             <table><tr><td>
               <div class="title"><?php echo $pouch->name; ?></div>
-              <div class="price"><span class="dollars"><?php echo $product_config->pouch_price; ?></span><span class="shipping"> + shipping</span></div>
+              <div class="price"><span class="dollars"><?php echo $product_config->pouch_price; ?></span> <span class="shipping">+ shipping</span></div>
               <div class="buy"><a href="#" class="btn cg-EZaddtocart" oid="<?php echo $pouch->order_id; ?>">Buy</a></div>
             </td></tr></table>
           </div>
@@ -60,7 +60,13 @@
       <?php endforeach; ?>
     </div>
     
-    <hr>
+    <div class="toffee-collection pouches-collection">
+      <div class="title">Pouch Collection</div>
+      <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div class="price"><span class="dollars"><?php echo $product_config->pouch_collection_price; ?></span> <span class="shipping">free shipping</span></div>
+      <div class="buy"><a href="#" class="btn cg-EZaddtocart" oid="<?php echo $pouch->pouch_collection_order_id; ?>">Buy</a></div>
+    </div>
+    
     
     <div class="toffee-slider mini-jars-slider">
       <div class="product product-pouch">your content</div>
