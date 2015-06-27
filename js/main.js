@@ -1,5 +1,11 @@
 
 $(document).ready( function() {
+    
+    var hasTouch = 'ontouchstart' in window;
+    
+    if ( ! hasTouch ) {
+        $('body').addClass('no-touch');
+    }
         
     // header hero image rotation
     $("#header .slideshow > div:gt(0)").hide();
@@ -55,15 +61,59 @@ $(document).ready( function() {
         ]
     });
     
+    if (hasTouch) {
+        $('.product').click( function(e) {
+            e.preventDefault();
+            if ( $(this).hasClass('active') ) {
+                if ( ! $(e.target).hasClass('btn') ) {
+                    // click was not the buy button, remove active class
+                    $(this).removeClass('active');
+                }
+            }
+            else {
+                $(this).addClass('active');
+            }
+        });
+    }
+    else {
+        $('.product').mouseover( function(e) {
+            $(this).addClass('active');
+        });
+        $('.product').mouseout( function(e) {
+            $(this).removeClass('active');
+        });
+    }
+    
+    initializeMap();
+    
 });
 
 
 $(document).on("click", "#menu-icon", function(e) {
     e.preventDefault();
-    $("#menu-list").toggle();
+    if ( $('#header').hasClass('menu-active') ) {
+        $('#header').removeClass('menu-active');
+    }
+    else {
+        $('#header').addClass('menu-active');
+    }
 });
 
 
-function productsInserted() {
-    console.log( 'productsInserted' );
+function initializeMap() {
+    var myLatlng = new google.maps.LatLng(42.544701,-83.466909);
+    var mapOptions = {
+      zoom: 4,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false
+    }
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'Hello World!'
+    });
 }

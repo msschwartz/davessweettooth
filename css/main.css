@@ -21,10 +21,12 @@ h1 {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+  background-color: #fff;
   display: inline-block;
   font-size: 16px;
 }
-.btn:hover, .btn:active {
+.no-touch .btn:hover, 
+.btn:active {
   background-color: #000;
   color: #fff;
 }
@@ -63,6 +65,9 @@ h1 {
   left: 50%;
   margin-left: -150px;
   width: 301;
+}
+#header .logo img {
+  width: 100%;
   height: auto;
 }
 
@@ -89,11 +94,28 @@ h1 {
   margin: 24px 0 0 0;
   padding: 0;
 }
+#header.menu-active .menu > ul {
+  display: block;
+}
 #header .menu > ul > li {
   margin: 0;
   padding: 3px 0;
 }
-
+@media (max-width: 767px) {
+  #header.menu-active .logo {
+    opacity: 0.1;
+  }
+  #header .menu {
+    top: 30px;
+    left: 30px;
+  }
+  #header .logo {
+    top: 30px;
+    left: 50%;
+    margin-left: -120px;
+    width: 240px;
+  }
+}
 
 
 
@@ -142,6 +164,8 @@ h1 {
   text-align: center;
   padding-left: 40px;
   padding-right: 40px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 #toffee #cg-root {
   display: none;
@@ -151,20 +175,16 @@ h1 {
   margin: 0 auto;
   height: 276px;
 }
-#toffee .toffee-slider.pouches-slider,
 #toffee .toffee-slider.mini-jars-slider,
 #toffee .toffee-slider.jars-slider {
   margin-top: 90px;
-}
-#toffee .toffee-slider.jars-slider {
-  margin-bottom: 90px;
 }
 #toffee .toffee-slider .product {
   padding: 0;
   position: relative;
 }
 #toffee .toffee-slider .product .details {
-  opacity: 0;
+  display: none;
   z-index: 2;
   position: absolute;
   top: 0;
@@ -199,10 +219,10 @@ h1 {
   margin: 0 auto;
   opacity: 1;
 }
-#toffee .toffee-slider .product:hover .details {
-  opacity: 1;
+#toffee .toffee-slider .product.active .details {
+  display: block;
 }
-#toffee .toffee-slider .product:hover .image {
+#toffee .toffee-slider .product.active .image {
   opacity: 0;
 }
 

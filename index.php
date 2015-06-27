@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
+<body ontouchstart="">
   
   <div id="header">
     <div class="slideshow">
@@ -113,28 +113,6 @@
   
   <div id="locations">
     <div id="map-canvas"></div>
-    <script>
-      function initialize() {
-        var myLatlng = new google.maps.LatLng(42.544701,-83.466909);
-        var mapOptions = {
-          zoom: 4,
-          center: myLatlng,
-          scrollwheel: false,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          mapTypeControl: false
-        }
-        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title: 'Hello World!'
-        });
-      }
-
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    
   </div>
   
   <div id="about">
