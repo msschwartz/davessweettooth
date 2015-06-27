@@ -398,3 +398,26 @@ h1 {
   color: rgba(255,255,255,0.35);
   font-size: 9px;
 }
+
+
+
+#davessweettooth #cg-cart,
+#davessweettooth #cg-account {
+  left: 0;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  right: auto;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+#davessweettooth #cg-cart:after,
+#davessweettooth #cg-account:after {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: 'futura_ptheavy';
+  white-space: nowrap;
+}
