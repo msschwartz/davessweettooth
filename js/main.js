@@ -1,4 +1,6 @@
 
+currentInfoWindow = null;
+
 $(document).ready( function() {
     
     var hasTouch = 'ontouchstart' in window;
@@ -101,19 +103,44 @@ $(document).on("click", "#menu-icon", function(e) {
 
 
 function initializeMap() {
-    var myLatlng = new google.maps.LatLng(42.544701,-83.466909);
+    
+    // Ann Arbor
+    var initLatlng = new google.maps.LatLng(42.280826, -83.743038);
     var mapOptions = {
-      zoom: 4,
-      center: myLatlng,
+      zoom: 10,
+      center: initLatlng,
       scrollwheel: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false
     }
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title: 'Hello World!'
-    });
+    
+    for (var i = 0; i < window.locations.length; i++) {
+        var location = window.locations[i];
+        var latlng = new google.maps.LatLng(location.lat, location.long);
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: location.name,
+            website: location.website,
+            city_state_zip: location.city_state_zip,
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            
+            if ( currentInfoWindow ) {
+                currentInfoWindow.close();
+                currentInfoWindow = null;
+            }
+            
+            var mapsUrl = 'http://maps.google.com?q=' + (this.title + '+' + this.city_state_zip).replace(/\s/g, '+');
+            var contentString = '';
+            contentString += '<h1>' + this.title + '</h1>';
+            contentString += '<p><a href="' + mapsUrl + '" target="_blank">Directions</a></p>';
+            contentString += '<p><a href="' + this.website + '" target="_blank">' + this.website + '</a></p>';
+            currentInfoWindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+            currentInfoWindow.open(map, this);
+        });
+    }
 }

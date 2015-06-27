@@ -113,6 +113,31 @@
   
   <div id="locations">
     <div id="map-canvas"></div>
+    <?php
+      $locations = array();
+      $header = true;
+      if (($handle = fopen("locations.csv", "r")) !== FALSE) {
+        while (($data = fgetcsv($handle)) !== FALSE) {
+          if ( $header ) {
+            $header = false;
+          }
+          else {
+            error_log(print_r($data, true));
+            $locations[] = array(
+              'website' => $data[0],
+              'name' => $data[1],
+              'city_state_zip' => $data[2],
+              'lat' => $data[3],
+              'long' => $data[4],
+            );
+          }
+        }
+        fclose($handle);
+      }
+    ?>
+    <script type="text/javascript">
+      window.locations = <?php echo json_encode($locations); ?>;
+    </script>
   </div>
   
   <div id="about">
