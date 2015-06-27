@@ -361,6 +361,11 @@ h1 {
 .slick-next:before {
   content: '\e805';
 }
+.slick-dots li button:before {
+  font-family: 'dst';
+  content: '\e806';
+  font-size: 24px;
+}
 
 
 
