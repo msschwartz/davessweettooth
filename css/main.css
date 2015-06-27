@@ -475,7 +475,11 @@ h1 {
   border-bottom-left-radius: 0;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-
+  bottom: 60px;
+  top: auto;
+}
+#davessweettooth #cg-account {
+  display: none;
 }
 #davessweettooth #cg-cart:after,
 #davessweettooth #cg-account:after {

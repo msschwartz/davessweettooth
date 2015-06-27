@@ -205,9 +205,9 @@
       <a href="mailto:press@davessweettooth.com">press<span class="at-sign">@</span>davessweettooth.com</a>
     </div>
     <div class="social-links">
-      <a href="http://facebook.com/mittencrate" target="blank">&#xE801;</a>
-      <a href="http://twitter.com/MittenCrate" target="blank">&#xE802;</a>
-      <a href="http://instagram.com/mittencrate" target="blank">&#xE803;</a>
+      <a href="https://www.facebook.com/DavesSweetTooth" target="blank">&#xE801;</a>
+      <a href="https://twitter.com/davessweettooth" target="blank">&#xE802;</a>
+      <a href="https://instagram.com/davessweettooth/" target="blank">&#xE803;</a>
     </div>
     <div class="copyright">Copyright &copy; <?php echo @date("Y"); ?> &middot; Dave's Sweet Tooth &middot; All Rights Reserved.</div>
   </div>
