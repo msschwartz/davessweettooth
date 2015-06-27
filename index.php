@@ -116,41 +116,49 @@
   </div>
   
   <div id="about">
-    <table>
-      <tr>
-        <td class="text">
-          <h1>Our Story</h1>
-          <span>When Dave Chmielewski started making toffee in his home kitchen 8 years ago, 
-          he never thought it would be where it is today. Dave, a retired Detroit Fire Fighter, 
-          had always loved to cook and bake. When he started making his infamous almond toffee 
-          however, the response was unlike anything he had seen before. People soon started 
-          calling the house and demanding that he make them some of his delicious toffee. 
-          With a few homemade labels and some Ball mason jars, Dave's Sweet Tooth was born. 
-          What had started as a hobby was now becoming more like a full-time job. Dave's son, 
-          Andrew, had always had an interest in business, and when he saw the demand that his 
-          father's toffee was creating, he knew that there was something there. In early 2011, 
-          he took control of the company's direction and set it on the current course. 
-          What started as a home kitchen operation a few years ago, has now grown into a 
-          company partnered with hundreds of retail stores and has garnered national 
-          notoriety across the country.</span>
-        </td>
-        <td class="image" style="background-image:url(/img/about1-tall.jpg)"><img src="/img/about1.jpg" /></td>
-      </tr>
-      <tr>
-        <td class="image" style="background-image:url(/img/about2.jpg)"><img src="/img/about2.jpg" /></td>
-        <td class="text">
-          <h1>Our Toffee</h1>
-          <span>We keep it simple. Fancy is too complicated. Real butter, real sugar, 
-          real milk chocolate, and hand sliced almonds prepared with love, one batch at a time, 
-          every time. Consistency is the key to our recipe. We don't stockpile our ingredients. 
-          We purchase them according to order size to ensure freshness and maintain taste integrity. 
-          We have never had an unsatisfied customer, and we refuse to skip the small steps 
-          in order to keep it that way. Maybe a bit old fashioned, but we do not use machines, 
-          microwaves, or assembly lines to produce our toffee. Dave's Sweet Tooth is and always 
-          will be; Hand Made. Homemade. Michigan Made.</span>
-        </td>
-      </tr>
-    </table>
+    <div class="about-row">
+      <img class="image" src="/img/about1.jpg" />
+      <div class="tall-image" style="background-image:url(/img/about1-tall.jpg)"></div>
+      <div class="text">
+        <div class="text-inner">
+          <div class="text-inner-inner">
+            <h1>Our Story</h1>
+            <div>When Dave Chmielewski started making toffee in his home kitchen 8 years ago, 
+            he never thought it would be where it is today. Dave, a retired Detroit Fire Fighter, 
+            had always loved to cook and bake. When he started making his infamous almond toffee 
+            however, the response was unlike anything he had seen before. People soon started 
+            calling the house and demanding that he make them some of his delicious toffee. 
+            With a few homemade labels and some Ball mason jars, Dave's Sweet Tooth was born. 
+            What had started as a hobby was now becoming more like a full-time job. Dave's son, 
+            Andrew, had always had an interest in business, and when he saw the demand that his 
+            father's toffee was creating, he knew that there was something there. In early 2011, 
+            he took control of the company's direction and set it on the current course. 
+            What started as a home kitchen operation a few years ago, has now grown into a 
+            company partnered with hundreds of retail stores and has garnered national 
+            notoriety across the country.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-row">
+      <img class="image" src="/img/about2.jpg" />
+      <div class="tall-image" style="background-image:url(/img/about2-tall.jpg)"></div>
+      <div class="text">
+        <div class="text-inner">
+          <div class="text-inner-inner">
+            <h1>Our Toffee</h1>
+            <div>We keep it simple. Fancy is too complicated. Real butter, real sugar, 
+            real milk chocolate, and hand sliced almonds prepared with love, one batch at a time, 
+            every time. Consistency is the key to our recipe. We don't stockpile our ingredients. 
+            We purchase them according to order size to ensure freshness and maintain taste integrity. 
+            We have never had an unsatisfied customer, and we refuse to skip the small steps 
+            in order to keep it that way. Maybe a bit old fashioned, but we do not use machines, 
+            microwaves, or assembly lines to produce our toffee. Dave's Sweet Tooth is and always 
+            will be; Hand Made. Homemade. Michigan Made.</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   
   <div id="contact">

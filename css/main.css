@@ -6,6 +6,12 @@ html, body {
   font-size: 14px;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 h1 {
   font-family: 'futura_ptheavy';
   text-transform: uppercase;
@@ -120,41 +126,96 @@ h1 {
 
 
 
-
-#about table,
-#about tr,
-#about td {
-  border: 0;
-  padding: 0;
-  border-spacing: 0;
+#about .about-row:before,
+#about .about-row:after {
+  display: table;
+  content: " ";
 }
-#about table tr td {
-  width: 50%;
+#about .about-row:after {
+  clear: both;
 }
-#about table tr td.text {
-  background: url(/img/about-bg.jpg) no-repeat center center;
-  background-size: cover;
-  padding: 66px;
-}
-#about table tr td.text h1 {
-  margin-bottom: 10px;
-}
-#about table tr td.text span {
-  font-size: 13px;
-  line-height: 18px;
-}
-#about table tr td.image {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-#about table tr td.image img {
+#about .about-row .image {
+  display: block;
   width: 100%;
   height: auto;
 }
-@media (max-width: 1199px) {
-  #about table tr td.image img {
+#about .about-row .tall-image {
+  display: none;
+}
+#about .about-row .text {
+  padding: 66px;
+  background: url(/img/about-bg.jpg) no-repeat center center;
+  background-size: cover;
+  text-align: left;
+}
+@media (min-width: 992px) {
+  #about .about-row {
+    position: relative;
+  }
+  #about .about-row .image {
     display: none;
+  }
+  #about .about-row .tall-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+  }
+  #about .about-row .text {
+    width: 50%;
+  }
+  #about .about-row:first-child .text {
+    float: left;
+  }
+  #about .about-row:first-child .tall-image {
+    right: 0;
+  }
+  #about .about-row:last-child .text {
+    float: right;
+  }
+  #about .about-row:last-child .tall-image {
+    left: 0;
+  }
+}
+@media (min-width: 1140px) {
+  #about .about-row:first-child {
+    text-align: right;
+  }
+  #about .about-row:last-child {
+    text-align: left;
+  }
+  #about .about-row .image {
+    width: 50%;
+    display: inline;
+  }
+  #about .about-row .tall-image {
+    display: none;
+  }
+  #about .about-row .text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #about .about-row:first-child .text {
+    left: 0;
+    float: none;
+  }
+  #about .about-row:last-child .text {
+    right: 0;
+    float: none;
+  }
+  #about .about-row .text .text-inner {
+    display: table;
+    height: 100%;
+  }
+  #about .about-row .text .text-inner .text-inner-inner {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 
