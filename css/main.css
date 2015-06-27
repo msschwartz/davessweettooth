@@ -4,6 +4,11 @@ html, body {
   font-family: 'futura_ptbook';
   letter-spacing: 1.5;
   font-size: 14px;
+  line-height: 1.4;
+}
+input, textarea, keygen, select, button {
+  font-family: 'futura_ptbook';
+  letter-spacing: 1.5;
 }
 
 * {
@@ -35,6 +40,17 @@ h1 {
 .btn:active {
   background-color: #000;
   color: #fff;
+}
+
+.btn.btn-black {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+.no-touch .btn.btn-black:hover, 
+.btn.btn-black:active {
+  background-color: #fff;
+  color: #000;
 }
 
 #header {
@@ -348,13 +364,55 @@ h1 {
 
 
 
+#locations {
+  position: relative;
+}
 #locations #map-canvas {
   background-color: #ccc;
-  height: 400px;
+  height: 500px;
 }
-
-
-
+#locations #map-canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  text-align: center;
+}
+#locations #map-canvas-overlay .table-display {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+#locations #map-canvas-overlay .table-cell-display {
+  display: table-cell;
+  vertical-align: middle;
+}
+#locations #map-canvas-overlay h1 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+#locations #map-canvas-overlay input {
+  padding: 7px 18px;
+  display: inline-block;
+  font-size: 14px;
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  vertical-align: top; /* keep that horizontal alignment... */
+  margin-right: 8px;
+  width: 300px;
+}
+#locations #map-canvas-overlay .btn {
+  margin-left: 8px;
+}
+@media (max-width: 499px) {
+  #locations #map-canvas-overlay input {
+    width: 200px;
+  }
+}
 
 #contact {
   background: #000;

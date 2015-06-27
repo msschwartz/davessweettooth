@@ -138,6 +138,17 @@
     <script type="text/javascript">
       window.locations = <?php echo json_encode($locations); ?>;
     </script>
+    <div id="map-canvas-overlay">
+      <div class="table-display">
+        <div class="table-cell-display">
+          <h1>Locations</h1>
+          <div>
+            <input id="locations-zip" type="text" name="zipcode" placeholder="Enter Zip" />
+            <a id="locations-go" href="#" class="btn btn-black">Go</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   
   <div id="about">

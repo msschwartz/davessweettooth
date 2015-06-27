@@ -86,7 +86,23 @@ $(document).ready( function() {
         });
     }
     
-    initializeMap();
+    $('#locations-go').click( function(e) {
+        e.preventDefault();
+        var zip = $('#locations-zip').val();
+        if (zip.length >= 5) {
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode( { 'address': zip}, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    initializeMap(results[0].geometry.location);
+                } else {
+                    alert('Invalid zip: ' + status);
+                }
+            });
+        }
+        else {
+            alert('Invalid zip');
+        }
+    });
     
 });
 
@@ -102,13 +118,10 @@ $(document).on("click", "#menu-icon", function(e) {
 });
 
 
-function initializeMap() {
-    
-    // Ann Arbor
-    var initLatlng = new google.maps.LatLng(42.280826, -83.743038);
+function initializeMap(center) {
     var mapOptions = {
-      zoom: 10,
-      center: initLatlng,
+      zoom: 11,
+      center: center,
       scrollwheel: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false
@@ -143,4 +156,6 @@ function initializeMap() {
             currentInfoWindow.open(map, this);
         });
     }
+    
+    $('#map-canvas-overlay').fadeOut();
 }
