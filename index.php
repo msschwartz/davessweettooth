@@ -106,6 +106,10 @@
         </div>
       <?php endforeach; ?>
     </div>
+    
+    <div class="toffee-collection">
+      <div class="title">Signature Mason Jars</div>
+    </div>
   
     <!-- cherries and grapes script -->
     <div id="cg-root"></div><script> var _cgid = "50fb035fc1277d1d2f000000"; (function(d) { var cg, id='cg-js', r = d.getElementsByTagName('script')[0]; if(d.getElementById(id)){return;} cg = d.createElement('script'); cg.id = id; cg.async = true; cg.src = "//cherriesandgrapes.com/js/cg.js"; r.parentNode.insertBefore(cg, r); })(document);</script>
