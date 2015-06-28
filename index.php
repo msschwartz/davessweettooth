@@ -18,9 +18,10 @@
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
   
   <!-- site css and js -->
-  <script type="text/javascript" src="/js/main.js?v=2"></script>
-  <link rel="stylesheet" href="/css/fonts.css?v=2">
-  <link rel="stylesheet" href="/css/main.css?v=2">
+  <?php $version = '1.1'; ?>
+  <script type="text/javascript" src="/js/main.js?v=<?php echo $version; ?>"></script>
+  <link rel="stylesheet" href="/css/fonts.css?v=<?php echo $version; ?>">
+  <link rel="stylesheet" href="/css/main.css?v=<?php echo $version; ?>">
 </head>
 <body id="davessweettooth" ontouchstart="">
   
