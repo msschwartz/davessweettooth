@@ -1,5 +1,12 @@
 <?php
-  if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+  $secret = file_get_contents( "locations-secret" );
+  if( ! ( isset( $_REQUEST['secret'] ) && $_REQUEST['secret'] == $secret ) ) {
+    header('HTTP/1.1 401 Unauthorized');
+    echo 'Unauthorized';
+    exit;
+  }
+  
+  if( isset( $_POST['locations'] ) ) {
     $target_dir = dirname ( __FILE__ );
     $target_file = $target_dir . "/locations.json";
     file_put_contents( $target_file, json_encode( $_POST['locations'] ) );
@@ -12,6 +19,8 @@
 <head>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
   <script type="text/javascript">
+    var secret = '<?php echo $secret; ?>';
+    
     var rowTemplate = '';
     rowTemplate += '<tr class="location-row">';
     rowTemplate += '  <td><input type="text" name="name" /></td>';
@@ -39,7 +48,7 @@
           "long": $(this).find('[name="long"]').val()
         });
       });
-      $.post( "/manage-locations.php", { locations : locations }, function( result ) {
+      $.post( "/manage-locations.php", { locations: locations, secret: secret }, function( result ) {
         alert( result );
       });
     });
