@@ -94,7 +94,21 @@ $(document).ready( function() {
         if( e.keyCode == 13 ) {
             processZipcode();
         }
-    })
+    });
+    
+    
+    // Performs a smooth page scroll to an anchor on the same page.
+    $('#menu-list a').click( function(e) {
+        var href = $(this).attr('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            var target = $(href);
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 500);
+            return false;
+        }
+    });
     
 });
 

@@ -37,7 +37,7 @@
     <div class="menu">
       <a id="menu-icon" href="#">&#xE800;</a>
       <ul id="menu-list">
-        <li><a href="#">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#toffee">Toffee</a></li>
         <li><a href="#locations">Locations</a></li>
         <li><a href="#about">About</a></li>
