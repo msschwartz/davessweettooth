@@ -64,7 +64,7 @@
     <div class="toffee-collection pouches-collection">
       <div class="title">Pouch Collection</div>
       <div class="description">One of each (5 total) of our 4oz. snack pouches.</div>
-      <div class="price"><span class="dollars"><?php echo $product_config->pouch_collection_price; ?></span> <span class="shipping">free shipping</span></div>
+      <div class="price"><span class="dollars"><?php echo $product_config->pouch_collection_price; ?></span> <span class="shipping">+ shipping</span></div>
       <div class="buy"><a href="#" class="btn cg-EZaddtocart" oid="<?php echo $product_config->pouch_collection_order_id; ?>">Buy</a></div>
     </div>
     
