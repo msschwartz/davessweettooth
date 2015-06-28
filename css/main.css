@@ -110,18 +110,31 @@ h1 {
 }
 
 #header .menu > ul {
-  display: none;
+  display: block;
   text-transform: uppercase;
   list-style: none;
   margin: 24px 0 0 0;
   padding: 0;
+  opacity: 0;
 }
 #header.menu-active .menu > ul {
-  display: block;
+  opacity: 1;
 }
 #header .menu > ul > li {
   margin: 0;
   padding: 3px 0;
+}
+#header .menu > ul > li > a {
+  pointer-events: none;
+}
+#header.menu-active .menu > ul > li > a {
+  pointer-events: auto;
+}
+#header .menu > ul,
+#header .logo {
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 @media (max-width: 767px) {
   #header.menu-active .logo {
