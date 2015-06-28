@@ -88,21 +88,13 @@ $(document).ready( function() {
     
     $('#locations-go').click( function(e) {
         e.preventDefault();
-        var zip = $('#locations-zip').val();
-        if (zip.length >= 5) {
-            geocoder = new google.maps.Geocoder();
-            geocoder.geocode( { 'address': zip}, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    initializeMap(results[0].geometry.location);
-                } else {
-                    alert('Invalid zip: ' + status);
-                }
-            });
-        }
-        else {
-            alert('Invalid zip');
-        }
+        processZipcode();
     });
+    $('#locations-zip').keydown( function (e) {
+        if( e.keyCode == 13 ) {
+            processZipcode();
+        }
+    })
     
 });
 
@@ -116,6 +108,24 @@ $(document).on("click", "#menu-icon", function(e) {
         $('#header').addClass('menu-active');
     }
 });
+
+
+function processZipcode() {
+    var zip = $('#locations-zip').val();
+    if (zip.length >= 5) {
+        geocoder = new google.maps.Geocoder();
+        geocoder.geocode( { 'address': zip}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                initializeMap(results[0].geometry.location);
+            } else {
+                alert('Invalid zip: ' + status);
+            }
+        });
+    }
+    else {
+        alert('Invalid zip');
+    }
+}
 
 
 function initializeMap(center) {
