@@ -1,5 +1,5 @@
 <?php
-  $secret = file_get_contents( "locations-secret" );
+  $secret = file_get_contents( dirname ( __FILE__ ) . '/../private/locations-secret' );
   if( ! ( isset( $_REQUEST['secret'] ) && $_REQUEST['secret'] == $secret ) ) {
     header('HTTP/1.1 401 Unauthorized');
     echo 'Unauthorized';
