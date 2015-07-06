@@ -33,7 +33,7 @@
       <div style="background-image: url(/img/header-slide3.jpg)"></div>
     </div>
     <div class="overlay"></div>
-    <a class="logo" href="/"><img src="/img/logo.svg" /></a>
+    <img class="logo" src="/img/logo.svg" />
     <div class="menu">
       <a id="menu-icon" href="#">&#xE800;</a>
       <ul id="menu-list">
