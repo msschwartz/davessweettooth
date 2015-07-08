@@ -209,7 +209,7 @@ h1 {
     left: 0;
   }
 }
-@media (min-width: 1140px) {
+@media (min-width: 1399px) {
   #about .about-row:first-child {
     text-align: right;
   }

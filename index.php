@@ -143,19 +143,27 @@
         <div class="text-inner">
           <div class="text-inner-inner">
             <h1>Our Story</h1>
-            <div>When Dave Chmielewski started making toffee in his home kitchen 8 years ago, 
-            he never thought it would be where it is today. Dave, a retired Detroit Fire Fighter, 
-            had always loved to cook and bake. When he started making his infamous almond toffee 
-            however, the response was unlike anything he had seen before. People soon started 
-            calling the house and demanding that he make them some of his delicious toffee. 
-            With a few homemade labels and some Ball mason jars, Dave's Sweet Tooth was born. 
-            What had started as a hobby was now becoming more like a full-time job. Dave's son, 
-            Andrew, had always had an interest in business, and when he saw the demand that his 
-            father's toffee was creating, he knew that there was something there. In early 2011, 
-            he took control of the company's direction and set it on the current course. 
-            What started as a home kitchen operation a few years ago, has now grown into a 
-            company partnered with hundreds of retail stores and has garnered national 
-            notoriety across the country.</div>
+            <div>When Dave Chmielewski started making toffee in his home kitchen, 
+            he never thought it would be where it is today. Dave, a retired Detroit 
+            Fire Fighter, had always loved to cook and bake. When he started making 
+            his infamous almond toffee however, the response was unlike anything he 
+            had seen before. People soon started calling the house and demanding 
+            that he make them some of this delicious treat. With a few homemade 
+            labels and some Ball mason jars, Dave began to sell his confectionary 
+            creation. What had started as a hobby quickly became more like a full-time 
+            job. Dave's son, Andrew, had always loved his dad’s cooking, and when 
+            he saw the demand that his father's toffee was creating, he knew that 
+            there was something there. In early 2011, inspired by his father's recipe 
+            and eager to put his passion for business to work, Andrew decided to 
+            create a business that would allow people across the country to taste 
+            the decadent treat...not to mention, free up space in his mother's kitchen. 
+            Dave's Sweet Tooth was born. People started spreading the word, and soon, 
+            Dave's Sweet Tooth was popping up in homes and businesses across the 
+            country, and even garnered national notoriety with an appearance on 
+            The Today Show. The response was unanimous--people couldn't get enough! 
+            And they still can't. We sure hope to keep it that way. Sticking to the 
+            tradition of creating handmade toffee in our home state of Michigan 
+            remains a priority, and using the very best ingredients remains a promise.</div>
           </div>
         </div>
       </div>
