@@ -19,7 +19,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
   
   <!-- site css and js -->
-  <?php $version = '1.2'; ?>
+  <?php $version = '1.3'; ?>
   <script type="text/javascript" src="/js/main.js?v=<?php echo $version; ?>"></script>
   <link rel="stylesheet" href="/css/fonts.css?v=<?php echo $version; ?>">
   <link rel="stylesheet" href="/css/main.css?v=<?php echo $version; ?>">
