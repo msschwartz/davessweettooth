@@ -151,7 +151,7 @@
             that he make them some of this delicious treat. With a few homemade 
             labels and some Ball mason jars, Dave began to sell his confectionary 
             creation. What had started as a hobby quickly became more like a full-time 
-            job. Dave's son, Andrew, had always loved his dad’s cooking, and when 
+            job. Dave's son, Andrew, had always loved his dad's cooking, and when 
             he saw the demand that his father's toffee was creating, he knew that 
             there was something there. In early 2011, inspired by his father's recipe 
             and eager to put his passion for business to work, Andrew decided to 
